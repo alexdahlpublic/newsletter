@@ -45,6 +45,7 @@ app.get("/", (req, res) => {
           ],
         }
       );
+      console.log(response);
       if (response.error_count === 0) {
         res.sendFile(`${__dirname}/success.html`);
       } else {
