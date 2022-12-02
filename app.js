@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // NOTE: route "/"
 app.get("/", (req, res) => {
-  res.sendFile(`${__dirname}/signup.html`);
+  res.type('html')send(signup);
 
   // note: get data from the user
   app.post("/", (req, res) => {
@@ -46,9 +46,9 @@ app.get("/", (req, res) => {
         }
       );
       if (response.error_count === 0) {
-        res.sendFile(`${__dirname}/success.html`);
+        res.type('html').send(success);
       } else {
-        res.sendFile(`${__dirname}/failure.html`);
+        res.type('html').send(failure);
       }
     };
     run();
