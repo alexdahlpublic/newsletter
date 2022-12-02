@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // NOTE: route "/"
 app.get("/", (req, res) => {
-  res.type('html')send(signup);
+  res.type('html').send(signup);
 
   // note: get data from the user
   app.post("/", (req, res) => {
